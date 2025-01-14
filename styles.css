@@ -1,0 +1,322 @@
+/* Google Fonts   font-family: "Paytone One", sans-serif; font-family: "Poppins", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* Css Sıfırlama sayfa yapısını sıfırlama*/
+
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+/* Site içerisinde tıklanma olayları ile geçiş sağlayınca soft bir geçiş sağlar. */
+scroll-behavior: smooth;
+list-style: none;
+}
+
+/* Css Tanımlamalar birden fazla kullanacağın kodların yazıldığı kod*/ 
+:root {
+    /* Renkler */
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #5a7184;
+    --main-color: #6e54fa;
+    /* Fontlar */
+    --big-font: 6rem;
+    --h2-font: 3rem;
+    --p-font: 1rem;
+    /* Gölgelendirme */
+    --box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    --box-shadow-hover: 5px 30px 56.1276px rgb(55 55 55 / 12%);
+    --transition: ease 0.4s;
+  }
+  body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Poppins", serif;
+  }
+  /* header */
+  .header{
+    position: fixed;
+    background-color: var(--text-color);
+    width: 100%;
+    top: 0;
+    padding: 30px 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+  }
+  .header .logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--bg-color);
+    letter-spacing: 5px;
+    white-space: nowrap;
+  }
+  .navbar a{
+    color: var(--bg-color);
+    font-size: var(--p-font);
+    padding: 10px 20px;
+    transition: var(--transition);
+  }
+  .navbar a:hover{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+  }
+  /* home alanı */
+  .home{
+    background: url(images/background.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .home-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .home-text h1{
+    font-size: var(--big-font);
+    color: black;
+    line-height: 1.2;
+    font-family: "Paytone One", sans-serif;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+  }
+
+  .home-text p{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+.center-btn{
+
+}
+.home-btn{
+  display: inline-block;
+  /* bu özellik sayesinde satır içerisindeki block özellik alır */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.home-btn:hover{
+  background-color: #f5f7f8;
+}
+
+/* Servis alanı */
+.container{
+  padding: 35px 20%;
+}
+.row-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+/* elemanlar kapsayıcı içerisinden sığmazsa bunu alt satıra at demek */
+  flex-wrap: wrap;
+}
+.row-item{
+  border: 1px solid #f0eded;
+  padding: 50px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+
+}
+.row-item h4{
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.row-item:hover{
+  box-shadow: var(--box-shadow);
+  border: 1px solid transparent;
+  transform: translateY(-3px);
+}
+.row-img img{
+  width: 80px;
+  height: 80px;
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+/* package alanı */
+.title h2{
+  margin-bottom: 30px;
+}
+.package-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.thumbnail{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transition: var(--transition);
+}
+.thumbnail h3{
+  position: absolute;
+  top: 35px;
+  right: 30px;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+.thumbnail img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+.dest-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.bxs-star{
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+.location h4{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.location p{
+  color: var(--second-color);
+  font-size: 15px;
+}
+.thumbnail:hover{
+  transform: scale(1.1);
+  filter: brightness(100%) hue-rotate(45deg);
+
+}
+
+/* Yerler */
+.destination-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.col-content{
+  width: 350px;
+  position: relative;
+}
+.col-content img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: var(--transition);
+}
+.col-content h5{
+  position: absolute;
+  bottom: 60px;
+  left: 15px;
+  font-size: 25px;
+  color: var(--bg-color);
+}
+.col-content p{
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  font-size: 15px;
+  color: var(--bg-color);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.col-content img:hover{
+  filter: brightness(100%) hue-rotate(45deg);
+  transform: scale(1.1);
+}
+/* Footer alanı */
+.contact{
+  background-color: var(--main-color);
+}
+.mainContainer{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.list{
+  width: 200px;
+}
+.list h4{
+  font-size: 20px;
+  color: var(--bg-color);
+  margin-bottom: 10px;
+  position: relative;
+}
+.list h4:before{
+  content: "";
+  height: 2px;
+  width: 50px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.list h4:hover::before{
+  width: 60%;
+}
+.list ul li a{
+  color: #f0eded;
+  font-size: var(--p-font);
+  margin-bottom: 10px;
+  display: block;
+  transition: var(--transition);
+}
+.list ul li a:hover{
+  color: var(--bg-color);
+  transform: translateX(20px);
+}
+.icons a{
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
+/* responsive tasarım */
+
+  @media (max-width: 1300px) {
+    .logo{
+      margin: 0 auto;
+    }
+    .navbar a{
+      display: none;
+    }
+  }
+  
