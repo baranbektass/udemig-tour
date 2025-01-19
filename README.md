@@ -1,4 +1,4 @@
-<h1>COK SAYFALI RESTORANT WEB SİTESİ </h1>
+<h1>UDEMİG TOUR </h1>
 
 Bu projede html,css kullanılmıştır.Genel olarak tur şirketlerinin kullanabileceği bir site oluşturulmuştur
 
